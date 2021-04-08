@@ -7,6 +7,7 @@ from dash.dependencies import Output, Input
 import plotly.express as px
 
 app = dash.Dash(__name__)
+server = app.server
 
 avocado = pd.read_csv('data_input/alpukat_fix.csv',sep=";", index_col=0)
 avocado["Date"] = avocado['Date'].astype('Datetime64')
